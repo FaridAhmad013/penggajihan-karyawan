@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\Job\JobStoreRequest;
 use App\Http\Requests\Job\JobUpdateRequest;
+use App\Models\Employee;
 use App\Models\Job;
 use Illuminate\Http\Request;
 
@@ -13,6 +14,12 @@ class JobController extends Controller
     {
         $jobs = Job::get();
         return view('jabatan.index', compact('jobs'));
+    }
+
+    public function show(Job $job)
+    {
+        $employees = Employee::orderBy('updated_at', 'DESC')->where('job_id', $job->id)->where('active', 1)->get();
+        return view('jabatan.show', compact('employees', 'job'));
     }
 
     public function create()

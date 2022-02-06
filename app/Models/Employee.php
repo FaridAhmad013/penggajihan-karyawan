@@ -20,7 +20,8 @@ class Employee extends Model
         'job_id',
         'education',
         'basic_salary',
-        'status'
+        'status',
+        'active'
     ];
 
     function job() {

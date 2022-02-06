@@ -19,7 +19,7 @@ class DashboardController extends Controller
     public function __invoke(Request $request)
     {
         $jobs = Job::get('title');
-        $employees = Employee::get('name');
+        $employees = Employee::where('active', 1)->get('name');
         return view('dashboard', compact('jobs', 'employees'));
     }
 }

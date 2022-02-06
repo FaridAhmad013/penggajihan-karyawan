@@ -27,6 +27,7 @@ class CreateEmployeesTable extends Migration
             $table->string('education');
             $table->bigInteger('basic_salary');
             $table->enum('status', ['tetap', 'kontrak']);
+            $table->boolean('active')->default(1);
             $table->timestamps();
         });
     }

@@ -1,15 +1,15 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-extrabold text-2xl inline-flex bg-gradient-to-r from-cyan-600 via-white to-sky-700 text-transparent bg-clip-text">
-            {{ __('Aplikasi Penggajian Karyawan') }}
+            {{ __('Halaman Dashboard') }}
         </h2>
     </x-slot>
 
-    <div class="relative -mt-11">
+    <div class="relative -mt-14">
         <div class="flex flex-wrap">
 
             <div class="lg:w-4/12 md:w-4/12 sm:w-6/12 w-full transition-all  duration-1000">
-                <x-card-header class="bg-cyan-500 text-cyan-50" :link="route('employee.index')" :title="'Karyawan'" :value="$employees->count()" >
+                <x-card-header class="bg-cyan-500 text-cyan-50" :link="route('employee.index')" :title="'Karyawan Yang Aktif'" :value="$employees->count()" >
                     <svg xmlns="http://www.w3.org/2000/svg" class="lg:h-16 h-10" viewBox="0 0 20 20"
                         fill="currentColor">
                         <path

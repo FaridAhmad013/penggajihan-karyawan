@@ -11,7 +11,7 @@
             <a class="p-3 hover:border-indigo-700  font-bold text-lg" href="">
                 <h1
                     class="font-bold bg-gradient-to-r from-sky-500 via-rose-300 to-blue-500 inline-flex text-transparent bg-clip-text bg-transparent text-lg text-center stroke-2 cursor-move">
-                    Penggajihan</h1>
+                    Penggajihan Karyawan</h1>
             </a>
         </div>
         <div class="flex ml-auto">
@@ -60,10 +60,13 @@
 @endisset
 
 
-    <main class="p-4" x-data="{
+    <main class="relative" x-data="{
         popUp: true
     }">
+        <div class="p-10">
         {{ $slot }}
+
+        </div>
             @if (Session::has('success'))
                 <x-alert :message="Session::get('success')"></x-alert>
             @endif

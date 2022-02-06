@@ -30,7 +30,8 @@
                 @enderror
             </div>
 
-            <div class="flex justify-end">
+            <div class="flex items-center justify-between">
+            <x-back></x-back>
             <x-button id="buttonJabatan">Tambah Jabatan</x-button>
             </div>
         </form>

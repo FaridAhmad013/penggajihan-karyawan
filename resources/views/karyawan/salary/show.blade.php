@@ -15,14 +15,15 @@
         $totalPengeluaran = $salary->insurance_deduction + $salary->pension + $salary->college_deduction;
     @endphp
 
-        <div class="bg-white shadow-lg rounded-lg p-6 lg:w-10/12 print:shadow-none">
+
+        <div class="bg-white shadow-lg rounded-lg p-6 relative print:shadow-none">
 
             <header class="flex justify-between flex-wrap items-center">
-                <div class="w-6/12 border p-4 text-center">
-                    <h3 class="text-2xl font-extrabold">Nama Perusahaan</h3>
+                <div class="w-6/12 border text-center border-sky-200">
+                    <h3 class="text-2xl p-4 font-extrabold ">Nama Perusahaan</h3>
                 </div>
-                <div class="w-6/12 text-center">
-                    <h3 class="text-2xl font-extrabold border-b-2 ml-5">Slip Gaji Karyawan</h3>
+                <div class="w-6/12 text-center ">
+                    <h3 class="text-2xl p-4 font-extrabold  border-b-2 border-sky-200 ml-5">Slip Gaji Karyawan</h3>
                 </div>
             </header>
 
@@ -30,29 +31,29 @@
                 <ul class="text-sm w-6/12 pr-5">
                     <li class="flex justify-between space-x-2">
                         <div>NIK</div>
-                        <div class="font-semibold">{{ $employee->id }}</div>
+                        <div class="font-semibold ">{{ $employee->id }}</div>
                     </li>
                     <li class="flex justify-between space-x-2">
                         <div>Nama Karyawan</div>
-                        <div class="font-semibold">{{ $employee->name }}</div>
+                        <div class="font-semibold ">{{ $employee->name }}</div>
                     </li>
                     <li class="flex justify-between space-x-2">
                         <div>Jabatan</div>
-                        <div class="font-semibold">{{ $employee->job->title }}</div>
+                        <div class="font-semibold ">{{ $employee->job->title }}</div>
                     </li>
                     <li class="flex justify-between space-x-2">
                         <div>Status</div>
-                        <div class="font-semibold">Karyawan {{ $employee->status }}</div>
+                        <div class="font-semibold ">Karyawan {{ $employee->status }}</div>
                     </li>
                 </ul>
-                <ul class="w-6/12 text-sm">
+                <ul class="w-6/12 pl-5 text-sm">
                     <li class="flex justify-between">
                         <div>Slip No.</div>
-                        <div class="font-semibold">{{ $salary->id }}</div>
+                        <div class="font-semibold ">{{ $salary->id }}</div>
                     </li>
                     <li class="flex justify-between text-xs">
                         <div>Dicetak</div>
-                        <div class="font-semibold">{{ \Carbon\Carbon::parse($salary->created_at)->format('D F Y') }}
+                        <div class="font-semibold ">{{ \Carbon\Carbon::parse($salary->created_at)->format('D F Y') }}
                         </div>
                     </li>
                 </ul>
@@ -60,11 +61,11 @@
 
             <div class="flex flex-wrap justify-between mt-4 pb-4 border-b-2">
 
-                <div class="lg:w-6/12">
-                    <table class="leading-relaxed ">
+                <div class="lg:w-6/12 pr-4">
+                    <table class="leading-relaxed w-full">
                         <thead>
                             <tr>
-                                <th colspan="3" class="bg-gray-700  text-white print:text-black">Penerimaan</th>
+                                <th colspan="3" class="bg-sky-600  text-white print:text-black">Penerimaan</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -105,7 +106,7 @@
                                 <td class="px-2">Rp. {{ number_format($salary->bonus, 2, ',', ',') }}</td>
                             </tr>
                         </tbody>
-                        <tfoot class="bg-gray-400 text-white print:text-black">
+                        <tfoot class="bg-sky-400 text-white print:text-black">
                             <tr>
                                 <td class="px-2">Total Pemasukan</td>
                                 <td class="px-2">
@@ -116,9 +117,9 @@
                     </table>
                 </div>
 
-                <div class="lg:w-6/12">
-                    <table class="leading-relaxed">
-                        <thead class="bg-gray-700 text-white print:text-black">
+                <div class="lg:w-6/12 pl-4">
+                    <table class="leading-relaxed w-full">
+                        <thead class="bg-rose-700 text-white print:text-black">
                             <tr>
                                 <th colspan="3">Potongan</th>
                             </tr>
@@ -145,7 +146,7 @@
                                 <td class="px-2">Rp. {{ number_format($salary->pension, 2, ',', ',') }}</td>
                             </tr>
                         </tbody>
-                        <tfoot class="bg-gray-400 text-white print:text-black">
+                        <tfoot class="bg-rose-400 text-white print:text-black">
                             <tr>
                                 <td class="px-2">Total Potongan</td>
                                 <td class="px-2">Rp. {{ number_format($totalPengeluaran, 2, ',', ',') }}</td>
@@ -156,7 +157,7 @@
 
             </div>
 
-            <div class="flex justify-end">
+            <div class="flex justify-end bg-green-500 text-green-50">
                 <div class="w-4/12">
                     <div class="flex justify-between">
 

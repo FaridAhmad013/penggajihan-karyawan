@@ -30,7 +30,8 @@
                         @enderror
                 </div>
 
-                <div class="flex justify-end">
+                <div class="flex justify-between items-center">
+                    <x-back></x-back>
                     <x-button>Edit</x-button>
                 </div>
 

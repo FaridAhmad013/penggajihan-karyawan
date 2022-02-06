@@ -19,7 +19,7 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        $employees = Employee::orderBy("created_at", "DESC")->get();
+        $employees = Employee::orderBy('active', 'DESC')->orderBy("created_at", "DESC")->get();
         return view('karyawan.index', compact('employees'));
     }
 
@@ -31,7 +31,7 @@ class EmployeeController extends Controller
     public function create()
     {
         $jobs = Job::get();
-        return view('karyawan.create', compact('jobs'));
+        return view('karyawan.create', ['jobs' => $jobs, 'employee' => new Employee()]);
     }
 
     /**
