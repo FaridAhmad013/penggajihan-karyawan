@@ -7,3 +7,7 @@ seacrh.classList.add("print:hidden", "rounded-lg", "border", "border-gray-200");
 
 let info = document.querySelector('.dataTable-info');
 info.classList.add("print:hidden");
+
+let pagination = document.querySelector('.dataTable-pagination')
+pagination.classList.add("print:hidden")
+

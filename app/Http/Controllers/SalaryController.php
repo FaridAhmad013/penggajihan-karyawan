@@ -15,12 +15,10 @@ class SalaryController extends Controller
      */
     public function __invoke(Request $request)
     {
-        // $request->validate([
-        //     'month' => 'required'
-        // ]);
 
          $salaries = Salary::where('created_at', 'LIKE', '%'.$request->month.'%' )->get();
 
          return view('laporan.index', compact('salaries'));
+         
     }
 }

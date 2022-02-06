@@ -54,7 +54,7 @@
         </div>
     </nav>
 @isset($header)
-<header class="bg-gradient-to-r from-gray-900 via-cyan-900 to-stone-900  p-10 print:hidden">
+<header class="bg-gradient-to-r from-gray-900 via-cyan-900 to-stone-900  lg:p-10 md:p-8 p-6 transform duration-1000 print:hidden">
     {{ $header }}
 </header>
 @endisset

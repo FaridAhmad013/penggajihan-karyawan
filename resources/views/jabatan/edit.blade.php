@@ -1,6 +1,7 @@
 <x-app-layout>
     <div class="flex justify-center">
-        <div class="bg-white shadow-lg rounded-lg lg:w-6/12 p-6">
+
+        <div class="bg-white shadow-lg rounded-lg lg:w-6/12 md:w-8/12 sm:w-10/12 w-full transform transition-all duration-1000 p-6">
 
             <form action="{{ route('job.update', $job->id) }}" method="post">
                 @csrf

@@ -1,15 +1,15 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-extrabold text-2xl inline-flex bg-gradient-to-r from-cyan-600 via-white to-sky-700 text-transparent bg-clip-text">
-            {{ __('Halaman Dashboard') }}
+            {{ __('Aplikasi Penggajian Karyawan') }}
         </h2>
     </x-slot>
 
     <div class="relative -mt-11">
         <div class="flex flex-wrap">
 
-            <div class="lg:w-4/12 md:w-4/12 sm:w-6/12 w-full">
-                <x-card-header :link="route('employee.index')" :title="'Karyawan'" :value="$employees->count()" >
+            <div class="lg:w-4/12 md:w-4/12 sm:w-6/12 w-full transition-all  duration-1000">
+                <x-card-header class="bg-cyan-500 text-cyan-50" :link="route('employee.index')" :title="'Karyawan'" :value="$employees->count()" >
                     <svg xmlns="http://www.w3.org/2000/svg" class="lg:h-16 h-10" viewBox="0 0 20 20"
                         fill="currentColor">
                         <path
@@ -18,8 +18,8 @@
                 </x-card-header>
             </div>
 
-            <div class="lg:w-4/12 md:w-4/12 sm:w-6/12 w-full">
-                <x-card-header :link="route('job.index')" :title="'Jabatan'" :value="$jobs->count()">
+            <div class="lg:w-4/12 md:w-4/12 sm:w-6/12 w-full transition-all  duration-1000 ease-in">
+                <x-card-header class="bg-gradient-to-br from-rose-500 to-red-400 text-stone-50" :link="route('job.index')" :title="'Jabatan'" :value="$jobs->count()">
                     <svg xmlns="http://www.w3.org/2000/svg" class="lg:h-16 h-10" x="0px" y="0px"
                         viewBox="0 0 481.291 481.291" fill="currentColor">
                         <path

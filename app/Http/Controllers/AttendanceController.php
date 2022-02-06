@@ -7,6 +7,7 @@ use App\Models\Employee;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 
+
 class AttendanceController extends Controller
 {
     public function login(Request $request)

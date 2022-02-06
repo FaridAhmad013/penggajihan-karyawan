@@ -2,7 +2,7 @@
     <x-slot name="title">Tambah Jabatan</x-slot>
     <div class="flex justify-center">
 
-        <div class="bg-white shadow-lg rounded-lg lg:w-6/12 p-6" >
+        <div class="bg-white shadow-lg rounded-lg lg:w-6/12 md:w-8/12 sm:w-10/12 w-full p-6 transition-all transform duration-1000" >
             <h2 class="text-center font-semibold text-gray-700 mb-3">Tambah Jabatan</h2>
 
             <form action="{{ route('job.store') }}" method="post" id="submit">
