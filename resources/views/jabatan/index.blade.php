@@ -28,7 +28,7 @@
                     </thead>
                     <tbody>
                         @foreach ($jobs as $index => $job)
-                            <tr class="odd:bg-teal-50 leading-relaxed">
+                            <tr class="odd:bg-teal-50 leading-relaxed transform hover:translate-y-3 duration-1000">
                                 <x-td>{{ $index + 1 }}</x-td>
                                 <x-td>{{ $job->title }}</x-td>
                                 <x-td>Rp. {{ number_format($job->subsidy, 2, ',', ',') }}</x-td>

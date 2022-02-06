@@ -18,7 +18,8 @@ class Salary extends Model
         'bonus',
         'insurance_deduction',
         'college_deduction',
-        'pension'
+        'pension',
+        'status'
     ];
 
     public function allowances()

@@ -20,6 +20,7 @@ class DashboardController extends Controller
     {
         $jobs = Job::get('title');
         $employees = Employee::where('active', 1)->get('name');
-        return view('dashboard', compact('jobs', 'employees'));
+        $salaries = Salary::where('status', 1)->get();
+        return view('dashboard', compact('jobs', 'employees', 'salaries'));
     }
 }

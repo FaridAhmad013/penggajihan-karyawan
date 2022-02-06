@@ -24,6 +24,7 @@ class CreateSalariesTable extends Migration
             $table->bigInteger('insurance_deduction')->default(0);
             $table->bigInteger('college_deduction')->default(0);
             $table->bigInteger('pension')->default(0);
+            $table->boolean('status')->default(0);
             $table->timestamps();
         });
     }

@@ -9,7 +9,7 @@
             @foreach ($employees as $employee)
 
             <div class="lg:w-1/3 md:w-1/2 sm:w-full w-full p-6">
-            <div class="bg-slate-700 lg:h-96 h-screen rounded-lg p-6 shadow-lg shadow-sky-500 relative overflow-hidden">
+            <div class="bg-slate-700 lg:h-96 h-screen rounded-lg p-6 shadow-lg shadow-sky-500 relative overflow-hidden transform hover:translate-y-3 duration-1000">
 
                 <img src="{{ asset($employee->photo ?? 'profile/users/business.png') }}" alt="" class="w-full rounded-full h-1/2 sm:h-2/3 object-cover">
                 <main>

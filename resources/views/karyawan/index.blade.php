@@ -34,7 +34,7 @@
 
                 <tbody>
                     @foreach ($employees as $index => $employee)
-                        <tr class="odd:bg-teal-50 leading-relaxed">
+                        <tr class="odd:bg-teal-50 leading-relaxed transform hover:translate-y-3 duration-1000">
 
                             <x-td>
                                 {{ $index + 1 }}
@@ -66,7 +66,7 @@
 
                                 <div class="flex flex-wrap">
 
-                                <x-icon  class="bg-sky-400 text-sky-50" title="Edit Karyawan">
+                                    <x-icon  class="bg-sky-400 text-sky-50" title="Edit Karyawan">
                                     <a href="{{ route('employee.edit', $employee->username) }}">
 
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
@@ -80,8 +80,6 @@
 
                                     </a>
                                 </x-icon>
-
-
 
                                     <x-icon  title="Lihat Detail Karyawan" class="bg-emerald-500 text-emerald-50">
                                         <a href="{{ route('employee.show', $employee->username) }}" class="items-center">

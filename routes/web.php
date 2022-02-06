@@ -24,9 +24,10 @@ Route::prefix('dashboard')->middleware(['auth'])->group(function(){
     Route::get('/surat-berhenti/{employee}', [SuratController::class, 'create'])->name('surat');
     Route::post('/surat-berhenti/{employee}', [SuratController::class, 'store'])->name('surat');
 
-
-    Route::get('/salary', SalaryController::class)->name('report');
-    Route::post('/salary', SalaryController::class)->name('report');
+    Route::resource('salary', SalaryController::class);
+    Route::get('salaries', [SalaryController::class, 'salaryActive'])->name('salary.active');
+    Route::get('/laporan', [SalaryController::class, 'laporan'])->name('report');
+    Route::post('/laporan', [SalaryController::class, 'laporan'])->name('report');
     Route::resource('/schedule', ScheduleController::class)->except('show', 'create', 'store', 'destroy');
 
     Route::prefix('{employee}/')->group(function() {

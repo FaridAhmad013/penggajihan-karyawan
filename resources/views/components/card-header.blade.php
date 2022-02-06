@@ -1,4 +1,4 @@
-<div {{ $attributes->merge(["class" => "rounded-lg shadow-lg lg:mr-4 md:mr-4 sm:mr-4 mt-2 lg:md:sm:mt-0 rounded flex-col overflow-hidden transition-all  duration-1000"]) }}>
+<div {{ $attributes->merge(["class" => "rounded-lg shadow-lg lg:mr-4 md:mr-4 sm:mr-4 mt-2 lg:md:sm:mt-0 rounded flex-col overflow-hidden transition-all hover:translate-x-3  duration-1000"]) }}>
     <a href="{{ $link ?? '#' }}" class="flex justify-between items-center pt-6 px-6">
         {{ $slot }}
         <span class="font-semibold lg:text-5xl text-4xl">{{ $value ?? 0 }}</span>
